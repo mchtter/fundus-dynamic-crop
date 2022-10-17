@@ -1,9 +1,7 @@
 {
   "name": "fundus-dynamic-crop",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fundus Photos Dynamic Crop Package for EyeCheckup",
-  "type":"module",
-  "module": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "npm test"
