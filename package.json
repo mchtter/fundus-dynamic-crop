@@ -1,6 +1,6 @@
 {
   "name": "fundus-dynamic-crop",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Fundus Photos Dynamic Crop Package for EyeCheckup",
   "main": "index.js",
   "scripts": {
@@ -26,8 +26,5 @@
   "bugs": {
     "url": "https://github.com/mchtter/fundus-dynamic-crop/issues"
   },
-  "homepage": "https://github.com/mchtter/fundus-dynamic-crop#readme",
-  "dependencies": {
-    "numjs": "^0.16.1"
-  }
+  "homepage": "https://github.com/mchtter/fundus-dynamic-crop#readme"
 }
