@@ -1,0 +1,35 @@
+{
+  "name": "fundus-dynamic-crop",
+  "version": "0.0.1",
+  "description": "Fundus Photos Dynamic Crop Package for EyeCheckup",
+  "type":"module",
+  "module": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mchtter/fundus-dynamic-crop.git"
+  },
+  "keywords": [
+    "fundus",
+    "eyecheckup",
+    "crop",
+    "dynamic",
+    "diabetic",
+    "retinopathy",
+    "photo",
+    "ai",
+    "retina"
+  ],
+  "author": "Alperen ERYILMAZ (mchtter)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mchtter/fundus-dynamic-crop/issues"
+  },
+  "homepage": "https://github.com/mchtter/fundus-dynamic-crop#readme",
+  "dependencies": {
+    "numjs": "^0.16.1"
+  }
+}
