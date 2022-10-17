@@ -12,7 +12,8 @@ let trimmedDataArray = [];
 
 let thresholdArray = [...Array(10).keys()]
 
-let cropImage = function cropImage(imageSource, callback) {
+export default function cropImage(imageSource, callback) {
+    console.log('DEBUG PACKAGE', imageSource)
     img.src = imageSource
     img.onload = function() {
         callback(app())
@@ -138,5 +139,3 @@ function app() {
 
     return trimmedPhoto.canvas.toDataURL()
 };
-
-module.exports = cropImage;
