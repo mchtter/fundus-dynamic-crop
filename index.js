@@ -1,9 +1,15 @@
 'use strict';
 let img = new Image();
+let croppedImage = new Image();
+let outputSize = 1024;
 
 let canvasContext = document.createElement('canvas').getContext("2d")
 let trimmedPhoto = document.getElementById("trimmedPhoto").getContext('2d')
+let outputPhoto = document.getElementById("outputPhoto").getContext('2d')
 document.getElementById("trimmedPhoto").style.display = "none";
+document.getElementById("outputPhoto").style.display = "none";
+outputPhoto.canvas.width = outputSize
+outputPhoto.canvas.height = outputSize
 
 let imgData = [];
 let dataArray = [];
@@ -136,5 +142,8 @@ function app() {
     changeTransparency(trimmedDataArray, 'transparentToBlack');
     trimmedPhoto.putImageData(trimmedImgData, 0, 0)
 
-    return trimmedPhoto.canvas.toDataURL()
+    croppedImage.src = trimmedPhoto.canvas.toDataURL()
+    outputPhoto.drawImage(croppedImage, 0, 0, outputSize, outputSize)
+
+    return outputPhoto.canvas.toDataURL()
 };
