@@ -131,7 +131,7 @@ function setImageSize(trimmed, _ctx, bound, trimHeight, trimWidth) {
     trimmedPhoto.putImageData(trimmed, 0, 0);
 }
 
-function app() {
+async function app() {
     canvasContext.canvas.width = img.width;
     canvasContext.canvas.height = img.height;
     canvasContext.drawImage(img, 0, 0);
@@ -147,6 +147,7 @@ function app() {
     trimmedPhoto.putImageData(trimmedImgData, 0, 0)
 
     croppedImage.src = trimmedPhoto.canvas.toDataURL()
+    await new Promise(resolve => setTimeout(resolve, croppedImage.onload));
     outputPhoto.drawImage(croppedImage, 0, 0, outputSize, outputSize)
 
     return outputPhoto.canvas.toDataURL()
