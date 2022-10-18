@@ -3,11 +3,15 @@ let img = new Image();
 let croppedImage = new Image();
 let outputSize = 1024;
 
+let trimmedCanvas = document.createElement('canvas');
+let outputCanvas = document.createElement('canvas');
+trimmedCanvas.id = "trimmedPhoto";
+outputCanvas.id = "outputPhoto";
+
 let canvasContext = document.createElement('canvas').getContext("2d")
-let trimmedPhoto = document.getElementById("trimmedPhoto").getContext('2d')
-let outputPhoto = document.getElementById("outputPhoto").getContext('2d')
-document.getElementById("trimmedPhoto").style.display = "none";
-document.getElementById("outputPhoto").style.display = "none";
+let trimmedPhoto = trimmedCanvas.getContext('2d')
+let outputPhoto = outputCanvas.getContext('2d')
+
 outputPhoto.canvas.width = outputSize
 outputPhoto.canvas.height = outputSize
 
